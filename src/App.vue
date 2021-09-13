@@ -1,6 +1,6 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <HelloWorld msg="Hotel Reviews App"/>
 </template>
 
 <script>
@@ -12,6 +12,8 @@ export default {
     HelloWorld
   }
 }
+
+
 </script>
 
 <style>

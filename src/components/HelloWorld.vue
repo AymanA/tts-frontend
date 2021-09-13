@@ -30,6 +30,7 @@ export default {
       loading: false,
       from: '2020-01-01',
       to: '2020-04-01',
+      reviews: []
     };
   },
 
@@ -65,9 +66,10 @@ export default {
       try {
         const response = await axios.get(url);
         const results = response.data.data;
-        this.hotels = results.map((hotel) => ({
-          id: hotel.id,
-          name: hotel.name,
+        this.reviews = results.map((review) => ({
+          averageScore: review['average-score'],
+          dateGroup: review['date-group'],
+          reviewCount: review['review-count'],
         }));
       } catch (err) {
         if (err.response) {
